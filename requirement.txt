@@ -1,0 +1,7 @@
+pdfplumber 
+pandas 
+setuptools 
+numpy
+datetime 
+sorted-months-weekdays
+sort-dataframeby-monthorweek
