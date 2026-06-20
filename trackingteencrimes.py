@@ -1,10 +1,19 @@
 #("/Users/marresaburke/Desktop/Teen-Crimes/LouisvilleTeenCrimes/fiveyrdata.pdf")
 
-import pdfminer.six
+from pypdf import PdfReader
 
-from pdfminer.six import extract_text
-text = extract_text("fiveyrdata.pdf")
+# Load your PDF file
+reader = PdfReader("fiveyrdata.pdf")
 
-print(text)
+# Extract and print text from all pages
+for page_num, page in enumerate(reader.pages):
+    text = page.extract_text()
+    print(f"--- Page {page_num + 1} ---")
+    print(text)
+
+ #This code - shows me there are 150 pages of this document 
+
 
 #with open("/Users/marresaburke/Desktop/Teen-Crimes/LouisvilleTeenCrimes/fiveyrdata.pdf", 'rb') as pdf_file:
+
+
